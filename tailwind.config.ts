@@ -73,25 +73,13 @@ export default {
           to: { height: "0" },
         },
         "fade-in-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(30px)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)"
-          }
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "scale-in": {
-          "0%": {
-            opacity: "0",
-            transform: "scale(0.95)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "scale(1)"
-          }
-        }
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -100,15 +88,20 @@ export default {
         "scale-in": "scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       backgroundImage: {
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-overlay': 'var(--gradient-overlay)',
+        "gradient-cosmic": "var(--gradient-cosmic)",
+        "gradient-nebula": "var(--gradient-nebula)",
+        "gradient-aurora": "var(--gradient-aurora)",
+        "gradient-glass": "var(--gradient-glass)",
       },
       boxShadow: {
-        'architectural': 'var(--shadow-architectural)',
-        'elegant': 'var(--shadow-elegant)',
+        cosmic: "var(--shadow-cosmic)",
+        nebula: "var(--shadow-nebula)",
+        glow: "var(--shadow-glow)",
+        "glow-violet": "var(--shadow-glow-violet)",
       },
       transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        smooth: "cubic-bezier(0.16, 1, 0.3, 1)",
+        float: "cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
     },
   },
