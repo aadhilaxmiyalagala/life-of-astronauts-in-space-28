@@ -2,110 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimal Architecture Design System - Black & White Excellence */
+/* ============================================
+   ANTIGRAVITY - Space Design System
+   All colors HSL. Semantic tokens only.
+   ============================================ */
 
 @layer base {
   :root {
-    /* Pure Architecture Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    
-    /* Primary: Pure Black */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    
-    /* Secondary: Pure White */
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
-    
-    /* Muted: Subtle Gray */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 20%;
-    
-    /* Accent: Elegant Gray */
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 0%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 0 0% 0%;
+    /* Default to dark space theme */
+    --background: 235 45% 5%;
+    --foreground: 210 40% 98%;
 
-    --radius: 0.5rem;
+    --card: 235 40% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --sidebar-background: 0 0% 98%;
+    --popover: 235 40% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Primary: Electric cosmic cyan */
+    --primary: 190 100% 60%;
+    --primary-foreground: 235 45% 5%;
+    --primary-glow: 190 100% 70%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Secondary: Cosmic violet */
+    --secondary: 270 80% 65%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glow: 280 90% 75%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --muted: 235 30% 15%;
+    --muted-foreground: 215 20% 70%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --accent: 320 90% 65%;
+    --accent-foreground: 210 40% 98%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --sidebar-border: 220 13% 91%;
+    --border: 235 30% 20%;
+    --input: 235 30% 15%;
+    --ring: 190 100% 60%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    
-    /* Architecture Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.8), hsl(0 0% 0% / 0.4));
-    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.9), hsl(0 0% 0% / 0.1));
-    
-    /* Elegant Shadows */
-    --shadow-architectural: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
-    
-    /* Smooth Transitions */
+    --radius: 1rem;
+
+    /* Cosmic gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(235 60% 8%) 0%, hsl(270 60% 12%) 50%, hsl(320 60% 10%) 100%);
+    --gradient-nebula: radial-gradient(ellipse at 20% 30%, hsl(270 80% 30% / 0.5), transparent 50%),
+                       radial-gradient(ellipse at 80% 70%, hsl(190 80% 30% / 0.4), transparent 50%),
+                       radial-gradient(ellipse at 50% 50%, hsl(320 70% 25% / 0.3), transparent 60%);
+    --gradient-aurora: linear-gradient(135deg, hsl(190 100% 60%), hsl(270 80% 65%), hsl(320 90% 65%));
+    --gradient-glass: linear-gradient(135deg, hsl(210 40% 98% / 0.08), hsl(210 40% 98% / 0.02));
+
+    /* Cosmic shadows & glows */
+    --shadow-cosmic: 0 25px 80px -20px hsl(190 100% 50% / 0.4);
+    --shadow-nebula: 0 25px 80px -20px hsl(270 80% 60% / 0.5);
+    --shadow-glow: 0 0 40px hsl(190 100% 60% / 0.5);
+    --shadow-glow-violet: 0 0 60px hsl(270 80% 65% / 0.6);
+
+    /* Transitions */
     --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-float: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Sidebar (legacy, unused but kept) */
+    --sidebar-background: 235 40% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 190 100% 60%;
+    --sidebar-primary-foreground: 235 45% 5%;
+    --sidebar-accent: 235 30% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 235 30% 20%;
+    --sidebar-ring: 190 100% 60%;
   }
 
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-    
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-    
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
-    
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 15%;
-    --input: 0 0% 10%;
-    --ring: 0 0% 100%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Light mode = "daylight on the ISS" — soft pastel sky */
+  .light {
+    --background: 220 60% 96%;
+    --foreground: 235 45% 12%;
+
+    --card: 220 50% 100%;
+    --card-foreground: 235 45% 12%;
+
+    --popover: 220 50% 100%;
+    --popover-foreground: 235 45% 12%;
+
+    --primary: 220 90% 50%;
+    --primary-foreground: 220 60% 98%;
+    --primary-glow: 220 100% 65%;
+
+    --secondary: 270 70% 55%;
+    --secondary-foreground: 220 60% 98%;
+    --secondary-glow: 280 80% 70%;
+
+    --muted: 220 30% 92%;
+    --muted-foreground: 235 20% 35%;
+
+    --accent: 320 75% 55%;
+    --accent-foreground: 220 60% 98%;
+
+    --border: 220 30% 85%;
+    --input: 220 30% 92%;
+    --ring: 220 90% 50%;
+
+    --gradient-cosmic: linear-gradient(135deg, hsl(220 80% 95%) 0%, hsl(270 70% 95%) 50%, hsl(320 70% 95%) 100%);
+    --gradient-nebula: radial-gradient(ellipse at 20% 30%, hsl(270 80% 80% / 0.4), transparent 50%),
+                       radial-gradient(ellipse at 80% 70%, hsl(220 80% 80% / 0.4), transparent 50%);
+    --gradient-glass: linear-gradient(135deg, hsl(235 45% 12% / 0.05), hsl(235 45% 12% / 0.01));
+
+    --shadow-glow: 0 0 40px hsl(220 90% 50% / 0.3);
   }
 }
 
@@ -114,38 +116,117 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background-image: var(--gradient-nebula), var(--gradient-cosmic);
+    background-attachment: fixed;
+    overflow-x: hidden;
   }
-  
-  /* Architectural Typography */
-  .text-architectural {
-    @apply tracking-[-0.02em] leading-[1.1];
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--foreground) / 0.1);
+    box-shadow: 0 8px 32px hsl(0 0% 0% / 0.3);
   }
-  
-  .text-minimal {
-    @apply tracking-wide uppercase text-xs font-medium;
+
+  .glass-strong {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--foreground) / 0.12);
+    box-shadow: 0 12px 40px hsl(0 0% 0% / 0.4);
   }
-  
-  /* Hero Image Overlay */
-  .hero-overlay {
-    background: var(--gradient-overlay);
+
+  /* Aurora gradient text */
+  .text-aurora {
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: aurora-shift 8s ease infinite;
   }
-  
-  /* Smooth Reveal Animation */
-  .reveal {
-    @apply opacity-0 translate-y-8;
-    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  /* Cosmic glowing button look */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
   }
-  
-  .reveal-delayed {
-    @apply opacity-0 translate-y-8;
-    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  .glow-violet {
+    box-shadow: var(--shadow-glow-violet);
   }
-  
-  @keyframes reveal {
-    to {
-      @apply opacity-100 translate-y-0;
-    }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
+  .animate-float-slow {
+    animation: float 10s ease-in-out infinite;
+  }
+  .animate-drift {
+    animation: drift 20s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin 40s linear infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  .animate-twinkle {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+}
+
+/* ============ Keyframes ============ */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-24px) rotate(2deg); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(30px, -20px) rotate(3deg); }
+  50% { transform: translate(-20px, -40px) rotate(-2deg); }
+  75% { transform: translate(-30px, 10px) rotate(2deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4); }
+  50% { box-shadow: 0 0 60px hsl(var(--primary) / 0.8); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes aurora-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 10px;
 }
